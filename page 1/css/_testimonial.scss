@@ -1,0 +1,78 @@
+.container--testimonial {
+  background: url("../images/front-page/background-purple.jpg");
+  background-position: center;
+  // background-size: 100% 100%;
+}
+
+.testimonial-content {
+  @include flex-col;
+  background: rgba(106,77,138, 0.2);
+  padding: 40px 0 20px;
+  text-align: center;
+  width: 100%;
+  > h2 {
+    font-size: 2.2em;
+    color: white;
+    margin-bottom: 40px;
+  }
+}
+
+.slick-container {
+  width: 100%;
+}
+
+.slick-slide {
+  @include flex-col;
+  justify-content: center;
+  text-align: center;
+  > img {
+    margin: 10px auto 30px;
+    border-radius: 50%;
+  }
+  > p {
+    padding: 40px 30px;
+    background: $font--purple;
+    color: white;
+    line-height: 1.8;
+    font-style: italic;
+    @media (min-width: 768px) {
+      margin: 0 auto;
+      width: 80%;
+      max-width: 1200px;
+    }
+  }
+  > span {
+    display: block;
+    color: white;
+    font-size: 2em;
+    margin-top: 30px;
+  }
+}
+
+.slick-dots li button {
+ content:"";
+}
+
+.slick-dots {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.slick-dots li button {
+  background-color: #eee;
+  border: 2px solid white;
+  color: white;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin: 20px 5px;
+}
+
+li.slick-active button {
+  background-color: $font--purple;
+  color: $font--purple;
+  border: 2px solid white;
+}

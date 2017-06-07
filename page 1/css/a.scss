@@ -1,0 +1,118 @@
+.about-content {
+  @include flex-col;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 60px 15px;
+  text-align: center;
+  > h2 {
+    font-size: 2.2em;
+    margin-bottom: 50px;
+  }
+  > p {
+    color: $font--grey;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      width: 80%;
+    }
+  }
+}
+
+.skills-container {
+  width: 100%;
+  padding: 0 20px;
+  @media (min-width: 768px) {
+    display: flex;
+
+  }
+}
+
+.skills-item {
+  width: 100%;
+  margin: 40px 0;
+  text-align: left;
+  position: relative;
+  > p > i {
+    margin-right: 10px;
+  }
+  > .progress-bar {
+    height: 8px;
+    background: black;
+    border-radius: 10px;
+    margin: 75px 0 30px;
+  }
+  .progress-bar-orange {
+    background: $font--orange;
+    width: 60%;
+  }
+
+  .progress-bar-blue {
+    background: $font--blue;
+    width: 82%
+  }
+  .progress-bar-purple {
+    background: $font--purple;
+    width: 86%
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+    width: 33%;
+  }
+}
+
+.skills-item--orange {
+  color: $font--orange;
+}
+
+.skills-item--orange::before {
+  border-radius: 20px;
+  content: "60%";
+  padding: 6px 12px;
+  position: absolute;
+  right: 40%;
+  top: -13px;
+  background: $font--orange;
+  color: white;
+  @media (min-width: 768px) {
+    top: 64px;
+  }
+}
+
+.skills-item--blue {
+  color: $font--blue;
+}
+
+.skills-item--blue::before {
+  border-radius: 20px;
+  content: "62%";
+  padding: 6px 12px;
+  position: absolute;
+  right: 18%;
+  top: -13px;
+  background: $font--blue;
+  color: white;
+  @media (min-width: 768px) {
+    top: 64px;
+  }
+}
+
+.skills-item--purple {
+  color: $font--purple;
+}
+
+.skills-item--purple::before {
+  border-radius: 20px;
+  content: "86%";
+  padding: 6px 12px;
+  position: absolute;
+  right: 14%;
+  top: -13px;
+  background: $font--purple;
+  color: white;
+  @media (min-width: 768px) {
+    top: 64px;
+  }
+}

@@ -1,0 +1,88 @@
+.blog-content {
+  @include flex-col;
+  width: 100%;
+  background: #222f36;
+  padding: 60px 15px;
+  text-align: center;
+  > h2 {
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+  > p {
+    color: $font--grey;
+    line-height: 1.8;
+  }
+  > button {
+    margin: 60px 0 70px;
+    background: $font--blue;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 15px 35px;
+    transition: background 0.3s ease;
+    >i {
+      margin-right: 10px;
+    }
+  }
+  > button:hover {
+    background: $font--purple;
+  }
+}
+
+.blog__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+.blog__item {
+  width: 100%;
+  background: white;
+  margin-bottom: 40px;
+  text-align: left;
+  > img {
+    width: 100%;
+  }
+  > h4, > p {
+    padding: 25px;
+    color: #5e5e5e;
+  }
+  > h4 {
+    font-size: 1.6em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+
+  }
+  > h4:hover {
+    color: $font--blue;
+  }
+  > p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  > a {
+    display: block;
+    padding: 25px;
+    margin-bottom: 30px;
+    color: $font--blue;
+    text-decoration: none;
+    > i {
+      margin-right: 5px;
+    }
+  }
+  @media (min-width: 768px) {
+    width: calc(50% - 20px);
+    margin: 0 10px 40px;
+  }
+  @media (min-width: 1024px) {
+    width: calc(33.333% - 20px);
+    margin: 0 10px 40px;
+  }
+}
